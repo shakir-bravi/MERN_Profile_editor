@@ -5,9 +5,10 @@ import { app } from "./app.js";
 
 dotenv.config({path:".env"})
 
+let port  = process.env.PORT || 4001
 DBConneection()
 .then(()=>{
-app.listen(4000 ,()=>{
+app.listen(port,()=>{
     console.log(" => App is Listening On http://localhost:4000");
     
 })
